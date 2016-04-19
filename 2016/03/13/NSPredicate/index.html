@@ -58,21 +58,18 @@
 
 
 <meta name="description" content="我是前言NSPredicate是一个Foundation类，它指定数据被获取或者过滤的方式。它的查询语言就像SQL的WHERE和正则表达式的交叉一样，提供了具有表现力的，自然语言界面来定义一个集合被搜寻的逻辑条件。
-谓词的基本用法我相信大家也都知道，网上也有很多的帖子分享了关于谓词的使用，下面是关于过滤存储复杂对象数组的谓词用法。
-使用谓词过滤两个存储复杂对象数组的方法直接上代码首先定义一个per">
+谓词的基本用法我相信大家也都知道，网上也有很多的帖子分享了关于谓词的使用，下面是关于过滤存储复杂对象数组的谓词用法。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS开发使用谓词过滤两个存储复杂对象的数组">
 <meta property="og:url" content="http://yoursite.com/2016/03/13/NSPredicate/index.html">
 <meta property="og:site_name" content="senro">
 <meta property="og:description" content="我是前言NSPredicate是一个Foundation类，它指定数据被获取或者过滤的方式。它的查询语言就像SQL的WHERE和正则表达式的交叉一样，提供了具有表现力的，自然语言界面来定义一个集合被搜寻的逻辑条件。
-谓词的基本用法我相信大家也都知道，网上也有很多的帖子分享了关于谓词的使用，下面是关于过滤存储复杂对象数组的谓词用法。
-使用谓词过滤两个存储复杂对象数组的方法直接上代码首先定义一个per">
-<meta property="og:updated_time" content="2016-03-12T19:02:11.000Z">
+谓词的基本用法我相信大家也都知道，网上也有很多的帖子分享了关于谓词的使用，下面是关于过滤存储复杂对象数组的谓词用法。">
+<meta property="og:updated_time" content="2016-04-19T02:32:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS开发使用谓词过滤两个存储复杂对象的数组">
 <meta name="twitter:description" content="我是前言NSPredicate是一个Foundation类，它指定数据被获取或者过滤的方式。它的查询语言就像SQL的WHERE和正则表达式的交叉一样，提供了具有表现力的，自然语言界面来定义一个集合被搜寻的逻辑条件。
-谓词的基本用法我相信大家也都知道，网上也有很多的帖子分享了关于谓词的使用，下面是关于过滤存储复杂对象数组的谓词用法。
-使用谓词过滤两个存储复杂对象数组的方法直接上代码首先定义一个per">
+谓词的基本用法我相信大家也都知道，网上也有很多的帖子分享了关于谓词的使用，下面是关于过滤存储复杂对象数组的谓词用法。">
 
 
 
@@ -328,6 +325,7 @@
       
         <h3 id="我是前言"><a href="#我是前言" class="headerlink" title="我是前言"></a>我是前言</h3><p>NSPredicate是一个Foundation类，它指定数据被获取或者过滤的方式。它的查询语言就像SQL的WHERE和正则表达式的交叉一样，提供了具有表现力的，自然语言界面来定义一个集合被搜寻的逻辑条件。</p>
 <p>谓词的基本用法我相信大家也都知道，网上也有很多的帖子分享了关于谓词的使用，下面是关于过滤存储复杂对象数组的谓词用法。</p>
+<a id="more"></a>
 <h3 id="使用谓词过滤两个存储复杂对象数组的方法"><a href="#使用谓词过滤两个存储复杂对象数组的方法" class="headerlink" title="使用谓词过滤两个存储复杂对象数组的方法"></a>使用谓词过滤两个存储复杂对象数组的方法</h3><h4 id="直接上代码"><a href="#直接上代码" class="headerlink" title="直接上代码"></a>直接上代码</h4><p>首先定义一个person 类 （可能命名有一些不规范…还请不要在意这些细节）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#import &lt;Foundation/Foundation.h&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@interface person : NSObject</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@property (nonatomic,strong) NSString *num;</span><br><span class="line"></span><br><span class="line">@property (nonatomic,strong) NSString *name;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ (instancetype)personWithNum:(NSString *)num name:(NSString *)name;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
 <p>在视图控制器(例子中是放在VC中的)中初始化一些person对象 ,</p>
@@ -505,6 +503,17 @@
         
 
         <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://god-long.github.io/" target="_blank">god-long</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://haloWang.gitHub.io/" target="_blank">haloWang</a>
+              </span>
+            
           
         </div>
 
